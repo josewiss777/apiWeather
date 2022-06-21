@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <title>Weather Today</title>
+</head>
+<body>
+    <div class="container" id="showContainer">
+        <h1 class="container__title">Weather 🌦️ Today</h1>
+        <p class="container__paragraph">Selecciona el país y agrega la ciudad que deseas consultar</p>
+        <div class="container__alert"></div> 
+        <form class="container__form" id="form" action="#" method="POST">                         
+            <div>
+                <label for="country">País</label>
+                <select class="container__select" id="country">
+                    <option disabled selected value="">Selecciona el país</option>
+                    <option value="CO">Colombia</option>
+                    <option value="AR">Argentina</option>
+                    <option value="ES">España</option>
+                    <option value="US">Estados Unidos</option>
+                    <option value="MX">México</option>
+                    <option value="PE">Perú</option>
+                </select>
+            </div>
+            <label for="city">Ciudad</label>
+            <input type="text" class="container__inputCity" id="city" placeholder="Escribe el nombre de la ciudad"/>
+            <input class="container__btnWeather" type="submit" value="MOSTRAR CLIMA"/>
+        </form>      
+    </div>
+    <div class="bgcontainer none">
+        <div id="showResult" >
+            <div class="result__info">
+                <img src="./img/weather.svg" alt="">
+                <p></p>
+                <div class="result__flex">
+                    <p></p>
+                    <p></p>
+                </div>
+                <button id="btnReset" type="submit">NUEVA BÚSQUEDA</button>
+            </div>
+            <div class="result__photo">
+                <h2></h2>
+                <div class="swiper">
+                    <div class="swiper-wrapper"></div>
+              </div>
+              <p></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/app.js" defer></script>
+</body>
+</html>
